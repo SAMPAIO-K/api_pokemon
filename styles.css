@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+main {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    border-top: 8px solid #ff5350; /* Vermelho Pokébola */
+}
+
+h1 {
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+    font-size: 1.8rem;
+}
+
+form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 1rem;
+}
+
+input[type="number"] {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input[type="number"]:focus {
+    border-color: #ff5350;
+}
+
+button {
+    padding: 12px 20px;
+    background-color: #ff5350;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+button:hover {
+    background-color: #e04845;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+#msg {
+    margin: 1rem 0;
+    font-weight: 500;
+    min-height: 1.5rem;
+}
+
+#resultado {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #eee;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+#resultado.hidden {
+    display: none;
+}
+
+#nomePokemon {
+    text-transform: capitalize;
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+#imgPoke {
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+    background-color: #f8f9fa;
+    border-radius: 50%;
+    padding: 10px;
+    margin-bottom: 1rem;
+    image-rendering: pixelated; /* Mantém os sprites pixelados nítidos */
+}
+
+#basePoke, #tipoPoke, #pesoPoke {
+    font-size: 1.1rem;
+    color: #555;
+    margin: 0.5rem 0;
+    background-color: #f0f2f5;
+    padding: 10px 15px;
+    border-radius: 8px;
+    display: block;
+    width: 100%;
+}
+
+#tipoPoke {
+    font-weight: bold;
+    color: #2c3e50;
+    background-color: #e9ecef;
+}
+
+@keyframes fadeIn {
+    from { 
+        opacity: 0; 
+        transform: translateY(10px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
